@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {Router} from '@angular/router';
+// import {AuthService} from '../shared/auth.service';
 
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'auth-login',
@@ -12,9 +13,9 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  errors:any[]=[];
-
+  
   constructor(private fb: FormBuilder,
+             
               private router:Router) { }
 
   ngOnInit() {
@@ -24,9 +25,7 @@ export class LoginComponent implements OnInit {
   initForm() {
     this.loginForm = this.fb.group({
       
-      email: ['', [Validators.required,
-                          Validators.pattern('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')]],
-      
+      email: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
@@ -41,6 +40,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    
+    // this.auth.login(this.loginForm.value).subscribe(
+    //   (token)=>{
+    //     this.router.navigate(['/home']);
+    //   },
+    //   (error)=>{
+    //     console.log(error);
+    //    } )
   }
 }

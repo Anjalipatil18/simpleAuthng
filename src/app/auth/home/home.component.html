@@ -1,29 +1,20 @@
+<a routerLink = '/product'> + Add Product</a>
 
-<!DOCTYPE html>
-<html>
-   <head>
-      <style>
-         table, th, td {
-            border: 1px solid black;
-         }
-      </style>
-   </head>
+<h1>
+  Products
+</h1>
 
-   <body>
-      <h1>Programming Languages</h1>
-      <table>
-         <tr>
-            <th>Language</th>
-            <th>Release Year</th>
-         </tr>
-         <tr>
-            <td>Java</td>
-            <td>1995</td>
-         </tr>
-         <tr>
-            <td>Pascal</td>
-            <td>1970</td>
-         </tr>
-      </table>
-   </body>
-</html>
+<table class="table table-bordered">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Color</th>
+    <th></th>
+    <th></th>
+    <tr *ngFor = "let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.color}}</td>
+      <td (click) = "deleteProduct(product.id)"><a >DELETE </a></td>
+      <td [routerLink] = "['/updateProduct', product.id]"><a>UPDATE</a></td>
+    </tr>
+</table>

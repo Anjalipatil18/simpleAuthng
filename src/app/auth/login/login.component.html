@@ -28,8 +28,22 @@
                      class="form-control"
                      id="password"
                      formControlName="password">
+                     <div *ngIf="isInvalidForm('password')"
+                class="alert alert-danger">
+  
+                <div *ngIf="isRequired('password')">
+                  password is required.
+                </div>
+  
+                <div *ngIf="loginForm.controls['password'].errors.pattern">
+                  Must be valid password format!
+                </div>
+              </div>
             </div>
-            <a type="submit"  href="http://localhost:4200/home">Submit</a>
+            <a routerLink="/home">
+            <button [disabled]="!loginForm.valid" type="submit" class="btn btn-bwm">Submit
+              
+            </button>       </a>   
           </form>
         </div>
       </div>

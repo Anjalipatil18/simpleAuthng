@@ -61,4 +61,30 @@ html,body,p {
     margin-top: 50px;
     letter-spacing: 1px;
   }
+  .table table-bordered{
+    table, th, td {
+      border: 1px solid black;
+      font-size: 30px;
+      padding: 10px;
+    }
+    
+    from, label, input {
+      font-size: 30px;
+      padding: 10px;
+    }
+    input {
+      margin-top: 10px;
+    }
+    
+    a {
+      color: $main-color;
+      font-size: 30px;
+    }
+    
+    a:hover {
+      cursor: pointer;
+      color:$main-color;
+    }
+  }
+ 
 }

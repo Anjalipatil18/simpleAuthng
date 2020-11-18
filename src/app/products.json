@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "name": "t-shirt",
+      "color": "pink",
+      "id": 1
+    },
+    {
+      "name": "pen",
+      "color": "red",
+      "id": 2
+    },
+    {
+      "name": "bottle",
+      "color": "white",
+      "id": 3
+    },
+    {
+      "name": "keyboard",
+      "color": "black",
+      "id": 4
+    },
+    {
+      "name": "keyboard",
+      "color": "blue",
+      "id": 5
+    }
+  ]
+}
