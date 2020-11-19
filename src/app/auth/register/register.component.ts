@@ -35,8 +35,4 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.controls[fieldName].errors.required
   }
 
-  register(){
-   
-  }  
-
 }
