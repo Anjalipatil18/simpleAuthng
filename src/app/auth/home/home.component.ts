@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
     this.http.get("http://localhost:5555/products").subscribe(
       (res: Response) => {
         this.products = res.json();
-       
       }
     )
   }

@@ -12,7 +12,7 @@ import 'rxjs/add/operator/toPromise';
 export class UpdateProductComponent implements OnInit {
 
   id:number;
-  data:object = {};
+  public data:any;
   products = [];
   exist = false;
   productObj:object = {};
@@ -44,7 +44,6 @@ export class UpdateProductComponent implements OnInit {
           if(parseInt(this.products[i].id) === this.id) {
             this.exist = true;
             this.data = this.products[i];
-            console.log(this.products[i])
             break;
           } else {
             this.exist = false;
