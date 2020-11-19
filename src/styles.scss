@@ -8,7 +8,7 @@ html,body,p {
   background-color: $main-color;
   border-color: $main-color;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-size: 20px;
 
   &:hover, &:focus, &:active {
@@ -34,15 +34,7 @@ html,body,p {
     font-weight: 700;
     margin-bottom: 30px;
   }
-  .image-container {
-    position: relative;
-
-    img {
-      width: 100%;
-      border-radius: 5px;
-    }
-  }
-
+ 
   label {
     font-size: 12px;
   }
@@ -61,6 +53,7 @@ html,body,p {
     margin-top: 50px;
     letter-spacing: 1px;
   }
+  
   .table table-bordered{
     table, th, td {
       border: 1px solid black;

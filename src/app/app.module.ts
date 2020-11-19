@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import{Routes,RouterModule}  from '@angular/router';
 
 import { AppComponent } from './app.component';
-import{HeaderComponent} from './common/header/header.component';
+// import{HeaderComponent} from './common/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,8 +16,8 @@ const routes:Routes=[
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent
+    AppComponent
+    // HeaderComponent
     ],
   imports: [
     RouterModule.forRoot(routes),

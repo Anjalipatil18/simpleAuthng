@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private http: Http,private router: Router) { }
+  constructor(private http: Http,
+              private router: Router) { }
   confirmationString:string = "New product has been added";
   isAdded: boolean = false;
   productObj:object = {};

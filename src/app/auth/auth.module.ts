@@ -6,6 +6,8 @@ import{Routes,RouterModule}  from '@angular/router';
 import {HttpModule} from '@angular/http';
 
 import { CommonModule } from '@angular/common';
+import { AuthService } from './auth.service'
+// import { AuthGuardService } from './auth-guard.service'
 
 import{AuthComponent} from './auth.component';
 import{RegisterComponent} from './register/register.component';
@@ -39,7 +41,7 @@ const routes:Routes=[
     HttpModule
   ],
   providers: [
-   
+    AuthService
     
   ]
 })

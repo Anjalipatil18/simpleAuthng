@@ -3,10 +3,11 @@
     <div class="row">
       <div class="col-md-5">
         <h1 class="page-title">Register</h1>
-        <form [formGroup]="registerForm" >
+        <form [formGroup]="registerForm" (ngSubmit)="register()" >
           <div class="form-group">
             <label for="fullName">FullName</label>
-            <input type="text"
+            <input [(ngModel)] = "credentials.fullname"
+                   type="text"
                    class="form-control"
                    id="fullName"
                    formControlName="fullName">
@@ -21,7 +22,8 @@
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email"
+            <input [(ngModel)] = "credentials.email"
+                   type="email"
                    class="form-control"
                    id="email"
                    formControlName="email">
@@ -40,7 +42,8 @@
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password"
+            <input [(ngModel)] = "credentials.password"
+                   type="password"
                    class="form-control"
                    id="password"
                    name="password"
@@ -57,11 +60,7 @@
               </div>
             </div>
           </div>
-          <a routerLink="/login">
-            <button [disabled]="!registerForm.valid"  type="submit" class="btn btn-bwm">
-              Submit
-            </button>
-          </a>
+          <button [disabled]="!registerForm.valid"  type="submit" class="btn btn-bwm">signup</button>
         </form>
       </div>
     </div>
